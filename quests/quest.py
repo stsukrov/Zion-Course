@@ -33,7 +33,8 @@ while True:
     elif command == "идти назад":
         print("И ты просто ушел. Ничего интересного.")
         break
-    elif command == "идти налево":
+    elif command == "идти налево" or command == "идти влево" :
+        print("Ты у болота.")
         if has_sword == False:
             print("Из болота вылез толстый гоблин и отдал тебе ржавый мечь")
             print("Какое никакое, а оружие.")
@@ -41,15 +42,19 @@ while True:
             has_sword = True
         else:
             print("Гоблин спит. Тебе его не разбудить.")
-    elif command == "идти направо":
+    elif command == "идти направо" or command == "идти вправо" :
+        print("Дуб перед тобой.")
         if has_sword == False:
             print("Хм. Дуб и дуб. Не знаю, что делать.")
         elif has_torch == False:
             print("Ловким движением ты рубишь ветку.")
+            print("В кармане у тебя нашлось огниво и жирная тряпка.")
             print("Теперь у тебя есть факел!")
             has_torch = True
         else:
             print("Больше от дерева никакой пользы.")
     else:
         print("Не понимаю. Попробуй еще.")
+
+print("GAME OVER")
 
